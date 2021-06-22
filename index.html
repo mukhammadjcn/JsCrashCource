@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/style/bootstrap.css">
+    <link rel="stylesheet" href="./static/style/main.css">
+    <title>Javascript on steriods</title>
+</head>
+<body>
+    
+    <div class="container">
+        <section class="project-one">
+                <h1 class="section-title">Get your age in days</h1>
+                <div class="row">
+                    <button class="btn btn-primary col-3" onclick="ageInDays()">Click</button>
+                    <button class="btn btn-danger col-3" onclick="remove()">Remove</button>
+                </div>
+                <div id="result" ></div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="project-two">
+            <h1 class="section-title">Image Generator</h1>
+            <button class="btn btn-success col-3" onclick="catGenerate()">Generate</button>
+            <button class="btn btn-danger col-3" onclick="removeCat()">Remove</button>
+            <div class="row" id="cat-gen"></div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="project-three">
+            <h1 class="section-title">To do list</h1>
+            <div class="row">
+                <input type="text" autocomplete="off" name="todo" id="toDo" class="col-6">
+                <button name="todo" onclick="toDoList()" class="btn btn-primary col-3">Add</button>
+            </div>
+            <div class="list" id="list">              
+                <!-- <h2 class="list-item">Vazifa qilish <button class="btn btn-danger">X</button></h2>          -->
+            </div>
+        </section>
+    </div>
+
+
+
+    <script src="./static/js/app.js"></script>
+</body>
+</html>
