@@ -63,3 +63,77 @@ function toDoList(){
 }
 
 
+// Rock Paper Scissors
+function rpsGame(yourChoice){
+    console.log(yourChoice);
+    var humanChoice, botChoice;
+    humanChoice = yourChoice.id;
+    botChoice = numberToChoice(randomToInt());
+    console.log('Computer choice :', botChoice);
+    results = decideWinner(humanChoice, botChoice);
+    console.log(results);
+    // alert(botchoice);
+
+}
+
+function randomToInt(){
+    return Math.floor(Math.random()*3);
+}
+
+function numberToChoice(number){
+    return ['rock', 'paper', 'qaychi'][number];
+}
+
+function decideWinner(yourChoice, computerChoice){
+    var rpsDatabase = {
+        'rock' : {'qaychi': 1, 'rock': 0.5, 'paper' : 0},
+        'paper' : {'rock': 1, 'paper': 0.5, 'qaychi' : 0},
+        'qaychi' : {'paper': 1, 'qaychi': 0.5, 'rock' : 0}
+    };
+
+    var yourChoice = rpsDatabase[yourChoice][computerChoice];
+    var computerChoice = rpsDatabase[computerChoice][yourChoice];
+
+    return [yourChoice, computerChoice];
+}
+
+
+
+// Changing colors
+var allButtons = document.getElementsByTagName('button');
+ 
+var copyAllButtons = [];
+for (let i=0; i< allButtons.length; i++){
+    copyAllButtons.push(allButtons[i])
+}
+
+function btnColorChange(btnThins){
+    if (btnThins.value === 'red'){
+        buttonsRed()
+    } else if (btnThins.value === 'green'){
+        buttonGreen()
+    } else if (btnThins.value === 'reset'){
+        buttonColorReset()
+    } else if (btnThins.value === 'random'){
+        randomColor()
+    }
+}
+
+function buttonsRed(){
+    for (let i=0; i<allButtons.length; i++){
+        allButtons[i].classList.remove(allButtons[i].classList[1]);
+        allButtons[i].classList.add('btn-danger')
+    }
+}
+function buttonGreen(){
+    for (let i=0; i<allButtons.length; i++){
+        allButtons[i].classList.remove(allButtons[1].classList[1]);
+        allButtons[i].classList.add('btn-success')
+    }
+}
+function buttonColorReset(){
+    for (let i=0; i<allButtons.length; i++){
+        allButtons[i].classList.remove(allButtons[i].classList[1]);
+        allButtons[i].classList.add(copyAllButtons[i]);
+    }
+}

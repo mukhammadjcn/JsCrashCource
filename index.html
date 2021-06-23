@@ -10,6 +10,7 @@
 </head>
 <body>
     
+    <!-- Get your age in days -->
     <div class="container">
         <section class="project-one">
                 <h1 class="section-title">Get your age in days</h1>
@@ -21,6 +22,7 @@
         </section>
     </div>
 
+    <!-- Image Generator -->
     <div class="container">
         <section class="project-two">
             <h1 class="section-title">Image Generator</h1>
@@ -30,6 +32,7 @@
         </section>
     </div>
 
+    <!-- To do list -->
     <div class="container">
         <section class="project-three">
             <h1 class="section-title">To do list</h1>
@@ -40,6 +43,36 @@
             <div class="list" id="list">              
                 <!-- <h2 class="list-item">Vazifa qilish <button class="btn btn-danger">X</button></h2>          -->
             </div>
+        </section>
+    </div>
+
+    <!-- Tosh qaychi qogoz -->
+    <div class="container">
+        <section class="project-four">
+            <h1 class="section-title">Tosh qaychi qog'oz</h1>
+            <div class="row" id="toshQaychiQogoz">
+                <img id="rock" src="https://i.dlpng.com/static/png/6888273_preview.png" class="col-3" onclick="rpsGame(this)" alt="">
+                <img id="paper" src="https://previews.123rf.com/images/rvika/rvika1312/rvika131200043/24626395-vector-old-paper-texture.jpg" onclick="rpsGame(this)"  class="col-3" alt="">
+                <img id="qaychi" src="https://t3.ftcdn.net/jpg/02/44/62/22/360_F_244622290_nnXdb9iNHDZjNpOvHSoKHjfBwAxW6QNk.jpg" onclick="rpsGame(this)"  class="col-3" alt="">
+            </div>
+        </section>
+    </div>
+
+    <div class="container">
+        <section class="project-five">
+            <h1 class="section-title">Ranglarni o'zgartirish</h1>      
+            <form action="" class="row">
+                <select name="backdrop" id="background" style="width: 20%; border-radius: 4px;" onchange="btnColorChange(this)">
+                    <option value="random">Random</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="reset">reset</option>
+                </select>
+                <button class="btn btn-primary col-2">Wee!</button>
+                <button class="btn btn-danger col-2 ">Yahoo!</button>
+                <button class="btn btn-warning col-2">Google!</button>
+                <button class="btn btn-success col-3">Facebook!</button>
+            </form>    
         </section>
     </div>
 

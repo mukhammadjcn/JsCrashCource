@@ -60,6 +60,16 @@ section {
   vertical-align: middle;
   position: absolute;
   right: 16px;
-  top: 14px;
+  top: 10px;
+}
+
+.project-four img {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.project-four img:hover {
+  -webkit-box-shadow: 0 0 34px rgba(23, 196, 235, 0.5);
+          box-shadow: 0 0 34px rgba(23, 196, 235, 0.5);
 }
 /*# sourceMappingURL=main.css.map */

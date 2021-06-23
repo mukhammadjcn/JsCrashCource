@@ -56,6 +56,15 @@ section{
     }
 }
 
+.project-four{
+    img{
+        transition: 0.3s ease-in-out;
+        &:hover{
+            box-shadow: 0 0 34px rgba(23, 196, 235, 0.5)  ; 
+        }
+    }
+}
+
 
 
 
