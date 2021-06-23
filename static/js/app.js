@@ -36,6 +36,8 @@ function toDoList(){
     document.getElementById("toDo").value = "";
     if(toDo.length > 5){
     var toDoValue = document.createTextNode(toDo)
+    } else{
+        alert(`Iltimos 5 ta so'zdan ko'proq bo'lgan vazifa kiritng`)
     }
 
 
