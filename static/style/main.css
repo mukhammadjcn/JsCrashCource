@@ -25,6 +25,13 @@ section {
   color: #6c757d;
 }
 
+input {
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  outline: none;
+}
+
 .project-two .btn {
   margin: 16px 10px 24px;
 }
@@ -71,5 +78,42 @@ section {
 .project-four img:hover {
   -webkit-box-shadow: 0 0 34px rgba(23, 196, 235, 0.5);
           box-shadow: 0 0 34px rgba(23, 196, 235, 0.5);
+}
+
+.vazifa {
+  font-size: 24px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+/*
+function reverseString(str) {
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+reverseString('hello');
+
+*/
+@media (max-width: 450px) {
+  .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+  }
+  .row input {
+    width: 90%;
+  }
+  .row button {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -10,6 +10,76 @@
 </head>
 <body>
     
+    <!-- Masala 1 -->
+    <div class="container">
+        <section>
+            <h1 class="section-title">Vazifa 1</h1>
+            <p>Men sizga N gacha bo'lgan barcha sonlarni 3 bo'linadigan ammo 5 ga bo'linmaydiganlarini topib beraman</p>
+            <div class="row">
+                <input type="text" class="col-6" id="vazifaBirInput">
+                <button class="btn btn-success col-2" onclick="vazifa1()">Natija</button>
+                <button onclick="reset()" class="btn btn-danger col-2">Reset</button>
+            </div>
+            <p id="vazifa-1-natija" class="vazifa"></p>
+        </section>
+    </div>
+
+    <!-- Masala 2 -->
+    <div class="container">
+        <section>
+            <h1 class="section-title">Vazifa 2</h1>
+            <p>Men sizlarga N soni mukammal son ekani yoki tekshirib beraman</p>
+            <div class="row">
+                <input type="text" class="col-6" id="vazifaIkkiInput">
+                <button class="btn btn-success col-2" onclick="vazifa2()">Natija</button>
+                <button onclick="reset()" class="btn btn-danger col-2">Reset</button>
+            </div>
+            <p id="vazifa-2-natija" class="vazifa"></p>
+        </section>
+    </div>
+
+    <!-- Masala 3 -->
+    <div class="container">
+        <section>
+            <h1 class="section-title">Vazifa 3</h1>
+            <p>Bratishka luuboy sonni 3 darajsini topib beraman</p>
+            <div class="row">
+                <input type="text" class="col-6" id="vazifaUchInput">
+                <button class="btn btn-success col-2" onclick="PowerA3()">Natija</button>
+                <button onclick="reset()" class="btn btn-danger col-2">Reset</button>
+            </div>
+            <p id="vazifa-3-natija" class="vazifa"></p>
+        </section>
+    </div>
+
+    <!-- Masala 4 -->
+    <div class="container">
+        <section>
+            <h1 class="section-title">Vazifa 4</h1>
+            <p>Maktabda o'qimaganlarga sonni nechi xonaligini topib beraman</p>
+            <div class="row">
+                <input type="text" class="col-6" id="vazifaTortInput">
+                <button class="btn btn-success col-2" onclick="vazifa4()">Natija</button>
+                <button onclick="reset()" class="btn btn-danger col-2">Reset</button>
+            </div>
+            <p id="vazifa-4-natija" class="vazifa"></p>
+        </section>
+    </div>
+
+    <!-- Masala 5 -->
+    <div class="container">
+        <section>
+            <h1 class="section-title">Vazifa 5</h1>
+            <p>Teskarimacha yozib beremi, unda biron nima kirit</p>
+            <div class="row">
+                <input type="text" class="col-6" id="vazifaBeshInput">
+                <button class="btn btn-success col-2" onclick="vazifa5()">Natija</button>
+                <button onclick="reset()" class="btn btn-danger col-2">Reset</button>
+            </div>
+            <p id="vazifa-5-natija" class="vazifa"></p>
+        </section>
+    </div>
+
     <!-- Get your age in days -->
     <div class="container">
         <section class="project-one">
@@ -45,8 +115,10 @@
             </div>
         </section>
     </div>
+         
+    <!--
 
-    <!-- Tosh qaychi qogoz -->
+    Tosh qaychi qogoz
     <div class="container">
         <section class="project-four">
             <h1 class="section-title">Tosh qaychi qog'oz</h1>
@@ -57,6 +129,7 @@
             </div>
         </section>
     </div>
+    
 
     <div class="container">
         <section class="project-five">
@@ -75,7 +148,27 @@
             </form>    
         </section>
     </div>
+    -->
+    
+    <!--  Get Time  -->
+    <div class="container">
+        <section>
+            <h2 class="section-title" id="demo"></h2>
+            <button class="btn btn-success" onclick="showTime()">Get time</button>
+            <button class="btn btn-danger" onclick="printPage()">Print</button>
+        </section>
+    </div>
 
+    <!-- Get hours via secunds -->
+    <div class="container">
+        <section>
+            <h4 class="section-title-sek">Get hours via secunds</h4>
+            <button class="btn btn-danger" style="margin-top: 20px;" onclick="getHours()" id="seHours">Get hours</button>
+        </section>
+    </div>
+
+    
+    
 
 
     <script src="./static/js/app.js"></script>

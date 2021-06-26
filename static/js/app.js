@@ -137,3 +137,103 @@ function buttonColorReset(){
         allButtons[i].classList.add(copyAllButtons[i]);
     }
 }
+
+
+
+function showTime(){
+    var time = new Date();
+    var text = document.getElementById("demo");
+    var answer = `${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
+    text.innerHTML = answer
+}
+
+function printPage(){
+    window.print()
+}
+
+
+function getHours(){
+    var text = document.querySelector(".section-title-sek")
+    var sek = prompt("Sekundlarni kiritng");
+    var soat = Math.floor(sek/3600);
+    var minute = Math.floor((sek - soat*3600)/60)
+    var sekund = sek - soat*3600 - minute*60;
+    text.innerHTML = `Siz kiritgan ${sek} sekund, ${soat} soat, ${minute} minut va ${sekund} sekund ga teng`;
+}
+
+//vazifa 1
+
+var result = document.getElementById("vazifa-1-natija")
+function vazifa1(){
+    var input = document.getElementById("vazifaBirInput").value;
+    if (input > 1){
+        funksiyaBir()
+    } else {
+        alert(`Iltimos, manfiy son, so'zlar yoki birdan kichik son kiritmang !`)
+    }
+
+    function funksiyaBir(){
+        var boluvchilariSoni = Math.floor(input / 3);
+        for (let i=1; i < boluvchilariSoni; i++){
+            if ((i*3)/3 && !((i*3)%5 == 0)){
+                var Value = document.createTextNode(i*3 + ' / ')
+            } else {  
+            }
+            result.appendChild(Value)
+        }
+    }
+}
+
+function reset(){
+    window.location.reload()
+}
+
+
+//vazifa 2
+function vazifa2(){
+    var result = document.getElementById("vazifa-2-natija")
+    var yigindi = 0
+    var input = document.getElementById("vazifaIkkiInput").value;
+    for (let i=1;i<input;i++){
+        if (input%i == 0){
+            yigindi= yigindi + i
+        } else{}
+    }
+    if (input == yigindi){
+        result.innerHTML = `Siz kiritgan ${input} soni mukammal son`
+    } else{
+        result.innerHTML = `Siz kiritgan ${input} soni mukammal son EMAS`
+    }
+   
+}
+
+//vazifa 3
+function PowerA3(){
+    var input = document.getElementById("vazifaUchInput").value
+    var result = document.getElementById("vazifa-3-natija")
+    var yechim = ((input)**3)
+    result.innerHTML = yechim
+}
+
+//vazifa 4
+function vazifa4(){
+    var input = document.getElementById("vazifaTortInput").value
+    var result = document.getElementById("vazifa-4-natija")
+    if (input > 9 && input < 100){
+        result.innerHTML = `Qumri ${input} soni o'nliklar xonasiga kiradi`
+    } else if (input > 0 && input < 10){
+        result.innerHTML = `Mittivoy ${input} soni birliklar xonasiga kiradi`
+    } else if (input > 99 && input < 1000){
+        result.innerHTML = `Qarol ${input} soni yuzliklar xonasiga kiradi`
+    } else {
+        result.innerHTML = `Trol bu ${input} soni senga sholpillab qoladi, Kotta bo'sen o'qisan !`
+    }
+}
+
+//vazifa 4
+function vazifa5(){
+    var input = document.getElementById("vazifaBeshInput").value;
+    var result = document.getElementById("vazifa-5-natija");
+    var yechim = input.split("").reverse().join(""); 
+    result.innerHTML = yechim;
+}
