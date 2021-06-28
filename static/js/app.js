@@ -1,13 +1,83 @@
+function donDonZiki(){
+    var result = document.getElementById("donDonResult")
+    var userChoice = document.getElementById("option").value
+    var computerOption = ['Quduq', 'Qogoz', 'Qaychi']
+    var randomOption = computerOption[Math.floor(Math.random()*computerOption.length)];
+    if (userChoice == 'Quduq' && randomOption == 'Quduq'){
+        result.innerHTML = `${userChoice} : ${randomOption} < Durang >`
+    } else if (userChoice == 'Quduq' && randomOption == 'Qogoz'){
+        result.innerHTML = `${userChoice} : ${randomOption} < Yutqazdingiz >`
+    } else if (userChoice == 'Quduq' && randomOption == 'Qaychi'){
+        result.innerHTML = `${userChoice} : ${randomOption} < Yutdingiz >`
+    } else if (userChoice == 'Qaychi' && randomOption == 'Quduq'){
+        result.innerHTML = `${userChoice} : ${randomOption} < Yutqazdingiz >`
+    } else if (userChoice == 'Qaychi' && randomOption == 'Qogoz'){
+        result.innerHTML = `${userChoice} : ${randomOption} < Yutdingiz >`
+    } else if (userChoice == 'Qaychi' && randomOption == 'Qaychi'){
+        result.innerHTML = `${userChoice} : ${randomOption} < Durang >`
+    } else if (userChoice == 'Qogoz' && randomOption == 'Quduq'){
+        result.innerHTML = `${userChoice} : ${randomOption} < Yutdingiz >`
+    } else if (userChoice == 'Qogoz' && randomOption == 'Qogoz'){
+        result.innerHTML = `${userChoice} : ${randomOption} < Durang >`
+    } else if (userChoice == 'Qogoz' && randomOption == 'Qaychi'){
+        result.innerHTML = `${userChoice} : ${randomOption} < Yutqazdingiz >`
+    } else if(userChoice == 'Bomm') {
+        result.innerHTML = `${userChoice} : ${randomOption} < Siz doim yutasiz >`
+    }
+}
+
+
+
+
+
+
+
+
 // Challange 1 : Get you age in days
 
 function ageInDays(){
-    var age = prompt("Tug'ilgan yilingizni kiriting :");
-    var ageDays = (2021 - age)*365;
-    var h1 = document.createElement("h1");
-    var textAnswer = document.createTextNode(`Tug'ilganingizga ${ageDays} kun bo'ldi`);
-    h1.appendChild(textAnswer);
-    h1.setAttribute("id", "ageInDays");
-    document.getElementById("result").appendChild(h1);
+    var natija = document.getElementById("result")
+    var date = new Date();
+    var yili =  Number(prompt("Iltimos tug'ilgan yilingizni kiritng:"))
+    var oyi = Number(prompt("Tug'ilgan oyingizni tartib raqamini kiriting :"))
+    var kuni = Number(prompt("Tug'ilgan kuningizni kiritng"))
+    var kabisaSoni = 0;
+        for (i = yili; i <= date.getFullYear() ; i ++){
+            if (((i % 4 == 0) && (i % 100 != 0)) || (i % 400 == 0)){
+                kabisaSoni ++;
+            } else{}
+        }
+    if (oyi <= date.getMonth()+1){
+         otibKetgan()
+    } else{
+         endiKeladi()
+    }
+     
+    function otibKetgan(){
+        var toliqKun = (date.getFullYear() - yili)*365;
+        var hozirgiKun = 0
+        if (date.getMonth()+1 == oyi){
+            hozirgiKun = Math.abs(kuni - date.getDate()) + kabisaSoni + toliqKun
+        } else if (date.getMonth()+1 - oyi == 1){
+            hozirgiKun = date.getDate() + 31 - kuni + kabisaSoni + toliqKun
+        } else {
+            hozirgiKun = date.getDate() + 31 - kuni + (date.getMonth() - oyi)*31 + kabisaSoni + toliqKun
+        }
+        natija.innerHTML = `Tug'ilganingizga ${hozirgiKun} kun bo'libdi :)`
+    }
+
+    function endiKeladi(){
+        var toliqKun = (date.getFullYear() - yili)*365;
+        var hozirgiKun = 0
+        if (date.getMonth()+1 == oyi){
+            hozirgiKun = Math.abs(kuni - date.getDate()) + kabisaSoni + toliqKun
+        } else if (oyi - date.getMonth()+1  == 1){
+            hozirgiKun = kuni + 31 - date.getDate() + kabisaSoni + toliqKun
+        } else {
+            hozirgiKun = kabisaSoni + toliqKun - (kuni + 31 - date.getDate() + (oyi - date.getMonth())*31)
+        }
+        natija.innerHTML = `Tug'ilganingizga ${hozirgiKun} kun bo'libdi :)`
+    }
 }
 function remove(){
     document.getElementById("ageInDays").remove()
@@ -237,3 +307,7 @@ function vazifa5(){
     var yechim = input.split("").reverse().join(""); 
     result.innerHTML = yechim;
 }
+
+
+
+
