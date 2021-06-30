@@ -87,17 +87,6 @@ input {
   padding: 0 10px;
 }
 
-/*
-function reverseString(str) {
-    var newString = "";
-    for (var i = str.length - 1; i >= 0; i--) {
-        newString += str[i];
-    }
-    return newString;
-}
-reverseString('hello');
-
-*/
 @media (max-width: 450px) {
   .row {
     -webkit-box-orient: vertical;
@@ -114,6 +103,14 @@ reverseString('hello');
   }
   .row button {
     width: 50%;
+  }
+  #option {
+    width: 80%;
+    border-radius: 10px;
+    height: 44px;
+  }
+  .vazifa {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=main.css.map */

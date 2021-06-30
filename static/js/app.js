@@ -1,37 +1,36 @@
+
+
+
+
+//don don ziki
+
 function donDonZiki(){
     var result = document.getElementById("donDonResult")
     var userChoice = document.getElementById("option").value
     var computerOption = ['Quduq', 'Qogoz', 'Qaychi']
     var randomOption = computerOption[Math.floor(Math.random()*computerOption.length)];
     if (userChoice == 'Quduq' && randomOption == 'Quduq'){
-        result.innerHTML = `${userChoice} : ${randomOption} < Durang >`
+        result.innerHTML = `${userChoice} : ${randomOption} [ Durang ]`
     } else if (userChoice == 'Quduq' && randomOption == 'Qogoz'){
-        result.innerHTML = `${userChoice} : ${randomOption} < Yutqazdingiz >`
+        result.innerHTML = `${userChoice} : ${randomOption} [ Yutqazdingiz ]`
     } else if (userChoice == 'Quduq' && randomOption == 'Qaychi'){
-        result.innerHTML = `${userChoice} : ${randomOption} < Yutdingiz >`
+        result.innerHTML = `${userChoice} : ${randomOption} [ Yutdingiz ]`
     } else if (userChoice == 'Qaychi' && randomOption == 'Quduq'){
-        result.innerHTML = `${userChoice} : ${randomOption} < Yutqazdingiz >`
+        result.innerHTML = `${userChoice} : ${randomOption} [ Yutqazdingiz ]`
     } else if (userChoice == 'Qaychi' && randomOption == 'Qogoz'){
-        result.innerHTML = `${userChoice} : ${randomOption} < Yutdingiz >`
+        result.innerHTML = `${userChoice} : ${randomOption} [ Yutdingiz ]`
     } else if (userChoice == 'Qaychi' && randomOption == 'Qaychi'){
-        result.innerHTML = `${userChoice} : ${randomOption} < Durang >`
+        result.innerHTML = `${userChoice} : ${randomOption} [ Durang ]`
     } else if (userChoice == 'Qogoz' && randomOption == 'Quduq'){
-        result.innerHTML = `${userChoice} : ${randomOption} < Yutdingiz >`
+        result.innerHTML = `${userChoice} : ${randomOption} [ Yutdingiz ]`
     } else if (userChoice == 'Qogoz' && randomOption == 'Qogoz'){
-        result.innerHTML = `${userChoice} : ${randomOption} < Durang >`
+        result.innerHTML = `${userChoice} : ${randomOption} [ Durang ]`
     } else if (userChoice == 'Qogoz' && randomOption == 'Qaychi'){
-        result.innerHTML = `${userChoice} : ${randomOption} < Yutqazdingiz >`
+        result.innerHTML = `${userChoice} : ${randomOption} [ Yutqazdingiz ]`
     } else if(userChoice == 'Bomm') {
-        result.innerHTML = `${userChoice} : ${randomOption} < Siz doim yutasiz >`
+        result.innerHTML = `${userChoice} : ${randomOption} [ Siz doim yutasiz ]`
     }
 }
-
-
-
-
-
-
-
 
 // Challange 1 : Get you age in days
 
